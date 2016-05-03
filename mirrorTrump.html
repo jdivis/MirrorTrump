@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Mirror Trump</title>
+    <style>
+      #trumpHolderOne{
+        left:0;
+      }
+      #trumpHolderTwo{
+	left:428px;
+      }
+      #trumpOriginal{
+        top:480px;
+	left:0;
+        position:absolute;
+      }
+      .trumpHolder{
+        width:428px;
+        position:absolute;
+	top:0;
+        overflow:hidden;
+	height:480px;
+      }
+      #trumpHolderTwo video{
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+	left:-428px;
+	position:absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="trumpHolder" id="trumpHolderOne"><video id="trumpHolderOneVideo" src="http://videos.usatoday.net/Brightcove2/29906170001/2016/05/29906170001_4875130306001_4875106006001.mp4"></video></div>
+    <div class="trumpHolder" id="trumpHolderTwo"><video id="trumpHolderTwoVideo" src="http://videos.usatoday.net/Brightcove2/29906170001/2016/05/29906170001_4875130306001_4875106006001.mp4"></video></div>
+    <div id="trumpOriginal"><video id="trumpHolderOriginalVideo" src="http://videos.usatoday.net/Brightcove2/29906170001/2016/05/29906170001_4875130306001_4875106006001.mp4"></video></div>
+    
+    <script>
+      var vid0 = document.getElementById("trumpHolderOneVideo");  
+      var vid1 = document.getElementById("trumpHolderTwoVideo");
+      var vid2 = document.getElementById("trumpHolderOriginalVideo");
+      vid0.play(); 
+      vid1.play();
+      vid2.play();
+    </script>
+
+  </body>
+</html>
+
+<!--<iframe title="USA TODAY - Embed Player" width="540" height="304" frameborder="0" scrolling="no" allowfullscreen="true" marginheight="0" marginwidth="0" src="http://www.usatoday.com/videos/embed/83849660/?fullsite=true&autoplay=1"></iframe>-->
